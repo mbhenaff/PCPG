@@ -3,7 +3,7 @@
 
 ## Running the code
 
-This repo contained the PyTorch implementation of the PCPG algorith, described in the following paper: [PCPG: Policy Cover Directed Exploration for Provable Policy Gradient Learning](https://arxiv.org/abs/2007.08459), by [Alekh Agarwal](http://alekhagarwal.net/), [Mikael Henaff](http://mikaelhenaff.net), [Sham Kakade](https://homes.cs.washington.edu/~sham/) and [Wen Sun](https://wensun.github.io/).
+This repo contains the PyTorch implementation of the PCPG algorithm, described in the following paper: [PCPG: Policy Cover Directed Exploration for Provable Policy Gradient Learning](https://arxiv.org/abs/2007.08459), by [Alekh Agarwal](http://alekhagarwal.net/), [Mikael Henaff](http://mikaelhenaff.net), [Sham Kakade](https://homes.cs.washington.edu/~sham/) and [Wen Sun](https://wensun.github.io/).
 
 The necessary dependencies are in the ```environment.yml``` file. You can run
 
@@ -19,7 +19,7 @@ To run PCPG on the Bidirectional Diabolical Combination Lock environment, execut
 python run.py -alg ppo-pcpg -env diabcombolockhallway -horizon 6 -lr 0.0005
 ```
 
-The scripts ```submit_combolock_pcpg.sh```, ```submit_combolock_ppo_rnd.sh``` and ```submit_combolock_ppo.sh``` will the PC-PG, PPO+RND and vanilla PPO algorithms on the combination locks for different horizon lengths. PC-PG solves the task for all horizon lengths at least 95% of the time, while PPO+RND only succeeds roughly 50% of the time due to not adequately exploring both locks. Vanilla PPO fails due to the antishaped rewards. 
+The scripts ```submit_combolock_pcpg.sh```, ```submit_combolock_ppo_rnd.sh``` and ```submit_combolock_ppo.sh``` will run the PCPG, PPO+RND and vanilla PPO algorithms on the combination locks for different horizon lengths. PCPG solves the task for all horizon lengths at least 95% of the time, while PPO+RND only succeeds roughly 50% of the time due to not adequately exploring both locks. Vanilla PPO fails due to the antishaped rewards. 
 
 
 ## Visualizing the policy cover
@@ -75,4 +75,4 @@ The scripts ```submit_mountaincar_pcpg.sh``` and ```submit_mountaincar_ppo_rnd.s
 
 ## Acknowledgements
 
-This codebase is based on the excellent [repo](https://github.com/ShangtongZhang/DeepRL) of Shangtong Zhang
+This codebase is based on the excellent [repo](https://github.com/ShangtongZhang/DeepRL) of Shangtong Zhang.
